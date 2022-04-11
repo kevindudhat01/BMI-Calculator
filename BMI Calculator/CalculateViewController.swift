@@ -33,9 +33,12 @@ class CalculateViewController: UIViewController {
         //let bmiResult = getWeight / (getHeight * getHeight)
         let bmiResult = getWeight / pow(getHeight, 2)
 
-        //print(bmiResult)
+        print(bmiResult)
         bmiValue = String(format: "%.1f", bmiResult)
         self.performSegue(withIdentifier: "goToResult", sender: self)
+        
+        //Button current title
+        print(sender.currentTitle!)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
